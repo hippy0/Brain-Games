@@ -1,0 +1,6 @@
+.idea
+app/gradle
+app/gradlew
+app/gradlew.bat
+app/.idea
+app/.gradle
