@@ -1,10 +1,11 @@
 plugins {
     id 'java'
     id 'application'
+    id 'checkstyle'
 }
 
 group 'hexlet.code'
-version '1.0-SNAPSHOT'
+version '1.0.1'
 
 application {
     mainClass = 'hexlet.code.App'
