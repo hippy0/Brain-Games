@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.game.CalculatorGame;
 import hexlet.code.game.EvenGame;
 import hexlet.code.game.GcdGame;
+import hexlet.code.game.PrimeGame;
 import hexlet.code.game.ProgressionGame;
 import java.util.Scanner;
 
@@ -31,6 +32,7 @@ public class Cli {
             3 - Calculator
             4 - GCD
             5 - Progression
+            6 - Prime
             0 - Exit
             """);
 
@@ -44,6 +46,9 @@ public class Cli {
             case 1 -> startBrainGames();
             case 2 -> {
                 String name = startBrainGames();
+
+                System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+
                 EvenGame.startEvenGame(name);
             }
             case 3 -> {
@@ -57,6 +62,13 @@ public class Cli {
             case 5 -> {
                 String name = startBrainGames();
                 ProgressionGame.startProgressionGame(name);
+            }
+            case 6 -> {
+                String name = startBrainGames();
+
+                System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+                
+                PrimeGame.startPrimeGame(name);
             }
             default -> System.out.println("I don't know this game, try again..");
         }

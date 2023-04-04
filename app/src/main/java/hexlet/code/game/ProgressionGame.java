@@ -14,7 +14,7 @@ public class ProgressionGame {
         int step = ThreadLocalRandom.current().nextInt(1, 6);
         int currentNumber = 0;
         int rightAnswer = 0;
-        
+
         List<Integer> list = new ArrayList<>();
 
         list.add(beginNumber);
