@@ -2,7 +2,7 @@ package hexlet.code;
 
 import hexlet.code.game.CalculatorGame;
 import hexlet.code.game.EvenGame;
-import java.util.HashMap;
+import hexlet.code.game.GcdGame;
 import java.util.Scanner;
 
 public class Cli {
@@ -28,6 +28,7 @@ public class Cli {
             1 - Greet
             2 - Even
             3 - Calculator
+            4 - GCD
             0 - Exit
             """);
 
@@ -46,6 +47,10 @@ public class Cli {
             case 3 -> {
                 String name = startBrainGames();
                 CalculatorGame.startCalculatorGame(name);
+            }
+            case 4 -> {
+                String name = startBrainGames();
+                GcdGame.startGcdGame(name);
             }
             default -> System.out.println("I don't know this game, try again..");
         }
