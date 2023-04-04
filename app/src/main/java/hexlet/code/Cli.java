@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.game.CalculatorGame;
 import hexlet.code.game.EvenGame;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -26,6 +27,7 @@ public class Cli {
         System.out.println("""
             1 - Greet
             2 - Even
+            3 - Calculator
             0 - Exit
             """);
 
@@ -40,6 +42,10 @@ public class Cli {
             case 2 -> {
                 String name = startBrainGames();
                 EvenGame.startEvenGame(name);
+            }
+            case 3 -> {
+                String name = startBrainGames();
+                CalculatorGame.startCalculatorGame(name);
             }
             default -> System.out.println("I don't know this game, try again..");
         }
