@@ -67,7 +67,7 @@ public class Cli {
                 String name = startBrainGames();
 
                 System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-                
+
                 PrimeGame.startPrimeGame(name);
             }
             default -> System.out.println("I don't know this game, try again..");

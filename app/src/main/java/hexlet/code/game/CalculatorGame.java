@@ -26,8 +26,9 @@ public class CalculatorGame {
             System.out.println("Question: " + numberOne + " * " + numberTwo);
         }
 
-        if (Engine.checkAnswer(name, String.valueOf(rightAnswer)))
+        if (Engine.checkAnswer(name, String.valueOf(rightAnswer))) {
             startCalculatorGame(name);
+        }
 
     }
 

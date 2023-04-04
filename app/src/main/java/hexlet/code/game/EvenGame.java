@@ -13,10 +13,14 @@ public class EvenGame {
 
         System.out.println("Question: " + random);
 
-        if (even) rightAnswer = "yes";
-            else rightAnswer = "no";
+        if (even) {
+            rightAnswer = "yes";
+        } else {
+            rightAnswer = "no";
+        }
 
-        if (Engine.checkAnswer(name, rightAnswer))
+        if (Engine.checkAnswer(name, rightAnswer)) {
             startEvenGame(name);
+        }
     }
 }

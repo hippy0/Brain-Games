@@ -13,8 +13,9 @@ public class GcdGame {
 
         System.out.println("Question: " + numberOne + " " + numberTwo);
 
-        if (Engine.checkAnswer(name, String.valueOf(rightAnswer)))
+        if (Engine.checkAnswer(name, String.valueOf(rightAnswer))) {
             startGcdGame(name);
+        }
     }
 
     private static int getGcd(int numberOne, int numberTwo) {

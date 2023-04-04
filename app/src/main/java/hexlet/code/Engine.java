@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import java.lang.reflect.Method;
 import java.util.Scanner;
 
 public class Engine {
@@ -21,7 +20,9 @@ public class Engine {
 
             return true;
         } else {
-            System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'.");
+            System.out.println(
+                "'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
+                    + "'.");
             System.out.println("Let's try again, " + name + "!");
 
             return false;

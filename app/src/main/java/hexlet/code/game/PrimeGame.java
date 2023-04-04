@@ -13,8 +13,11 @@ public class PrimeGame {
 
         System.out.println("Question: " + random);
 
-        if (prime) rightAnswer = "yes";
-         else rightAnswer = "no";
+        if (prime) {
+            rightAnswer = "yes";
+        } else {
+            rightAnswer = "no";
+        }
 
         if (Engine.checkAnswer(name, rightAnswer)) {
             startPrimeGame(name);

@@ -20,7 +20,9 @@ public class ProgressionGame {
         list.add(beginNumber);
 
         for (int i = 1; i < progressionLength; i += 1) {
-            if (i == 1) currentNumber += beginNumber;
+            if (i == 1) {
+                currentNumber += beginNumber;
+            }
 
             currentNumber += step;
 
@@ -39,8 +41,9 @@ public class ProgressionGame {
             .replace("100", "..")
         );
 
-        if (Engine.checkAnswer(name, String.valueOf(rightAnswer)))
+        if (Engine.checkAnswer(name, String.valueOf(rightAnswer))) {
             startProgressionGame(name);
+        }
     }
 
 }
