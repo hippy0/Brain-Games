@@ -16,6 +16,7 @@ public class EvenGame {
         if (even) rightAnswer = "yes";
             else rightAnswer = "no";
 
-        if (Engine.checkAnswer(name, rightAnswer)) startEvenGame(name);
+        if (Engine.checkAnswer(name, rightAnswer))
+            startEvenGame(name);
     }
 }

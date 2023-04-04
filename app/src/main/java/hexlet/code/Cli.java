@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.game.CalculatorGame;
 import hexlet.code.game.EvenGame;
 import hexlet.code.game.GcdGame;
+import hexlet.code.game.ProgressionGame;
 import java.util.Scanner;
 
 public class Cli {
@@ -29,6 +30,7 @@ public class Cli {
             2 - Even
             3 - Calculator
             4 - GCD
+            5 - Progression
             0 - Exit
             """);
 
@@ -51,6 +53,10 @@ public class Cli {
             case 4 -> {
                 String name = startBrainGames();
                 GcdGame.startGcdGame(name);
+            }
+            case 5 -> {
+                String name = startBrainGames();
+                ProgressionGame.startProgressionGame(name);
             }
             default -> System.out.println("I don't know this game, try again..");
         }
