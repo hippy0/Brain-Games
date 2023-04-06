@@ -6,8 +6,8 @@ import java.util.concurrent.ThreadLocalRandom;
 public class GcdGame {
 
     public static void startGcdGame(String name) {
-        int origin = 50;
-        int bound = 101;
+        final int origin = 50;
+        final int bound = 101;
 
         int numberOne = ThreadLocalRandom.current().nextInt(1, origin);
         int numberTwo = ThreadLocalRandom.current().nextInt(origin, bound);

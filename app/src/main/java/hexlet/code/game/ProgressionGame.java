@@ -8,8 +8,8 @@ import java.util.concurrent.ThreadLocalRandom;
 public class ProgressionGame {
 
     public static void startProgressionGame(String name) {
-        int origin = 5;
-        int bound = 11;
+        final int origin = 5;
+        final int bound = 11;
 
         int progressionLength = ThreadLocalRandom.current().nextInt(origin, bound);
         int hiddenElement = ThreadLocalRandom.current().nextInt(1, progressionLength - 1);

@@ -39,32 +39,38 @@ public class Cli {
         System.out.print("Your choice: ");
 
         Scanner scanner = new Scanner(System.in);
-        int gameNumber = Integer.parseInt(scanner.next());
+
+        final int gameNumber = Integer.parseInt(scanner.next());
+        final int evenGame = 2;
+        final int calculatorGame = 3;
+        final int gcdGame = 4;
+        final int progressionGame = 5;
+        final int primeGame = 6;
 
         switch (gameNumber) {
             case 0 -> System.exit(0);
             case 1 -> startBrainGames();
-            case 2 -> {
+            case evenGame -> {
                 String name = startBrainGames();
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
                 EvenGame.startEvenGame(name);
             }
-            case 3 -> {
+            case calculatorGame -> {
                 String name = startBrainGames();
                 System.out.println("What is the result of the expression?");
                 CalculatorGame.startCalculatorGame(name);
             }
-            case 4 -> {
+            case gcdGame -> {
                 String name = startBrainGames();
                 System.out.println("Find the greatest common divisor of given numbers.");
                 GcdGame.startGcdGame(name);
             }
-            case 5 -> {
+            case progressionGame -> {
                 String name = startBrainGames();
                 System.out.println("What number is missing in the progression?");
                 ProgressionGame.startProgressionGame(name);
             }
-            case 6 -> {
+            case primeGame -> {
                 String name = startBrainGames();
                 System.out.println(
                     "Answer 'yes' if given number is prime. Otherwise answer 'no'.");

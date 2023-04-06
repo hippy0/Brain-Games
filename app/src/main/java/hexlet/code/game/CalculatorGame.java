@@ -6,9 +6,9 @@ import java.util.concurrent.ThreadLocalRandom;
 public class CalculatorGame {
 
     public static void startCalculatorGame(String name) {
-        int operationsCount = 3;
-        int origin = 25;
-        int bound = 51;
+        final int operationsCount = 3;
+        final int origin = 25;
+        final int bound = 51;
 
         int operation = ThreadLocalRandom.current().nextInt(0, operationsCount);
         int numberOne = ThreadLocalRandom.current().nextInt(origin, bound);

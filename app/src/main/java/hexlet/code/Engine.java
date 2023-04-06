@@ -7,7 +7,7 @@ public class Engine {
     public static boolean checkAnswer(String name, String rightAnswer) {
         Scanner scanner = new Scanner(System.in);
         String playerAnswer = scanner.next();
-        int winScore = 3;
+        final int winScore = 3;
 
         if (playerAnswer.equals(String.valueOf(rightAnswer))) {
             System.out.println("Correct!");
