@@ -6,7 +6,8 @@ import java.util.concurrent.ThreadLocalRandom;
 public class EvenGame {
 
     public static void startEvenGame(String name) {
-        int random = ThreadLocalRandom.current().nextInt(0, 50);
+        int bound = 50;
+        int random = ThreadLocalRandom.current().nextInt(0, bound);
         boolean even = random % 2 == 0;
 
         String rightAnswer;

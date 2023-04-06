@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Cli {
 
-    public static int correctAnswersScore = 0;
+    private static int correctAnswersScore = 0;
 
     private static String startBrainGames() {
         System.out.println("Welcome to the Brain Games!");
@@ -42,44 +42,57 @@ public class Cli {
         int gameNumber = Integer.parseInt(scanner.next());
 
         switch (gameNumber) {
+            case 0:
+                System.exit(1);
+            case 1:
+                startBrainGames();
+            case 2:
+                String name = startBrainGames();
+                System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+                EvenGame.startEvenGame(name);
+            case 3:
+
+        }
+
+        switch (gameNumber) {
             case 0 -> System.exit(0);
             case 1 -> startBrainGames();
             case 2 -> {
                 String name = startBrainGames();
-
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-
                 EvenGame.startEvenGame(name);
             }
             case 3 -> {
                 String name = startBrainGames();
-
                 System.out.println("What is the result of the expression?");
-
                 CalculatorGame.startCalculatorGame(name);
             }
             case 4 -> {
                 String name = startBrainGames();
-
                 System.out.println("Find the greatest common divisor of given numbers.");
-
                 GcdGame.startGcdGame(name);
             }
             case 5 -> {
                 String name = startBrainGames();
-
                 System.out.println("What number is missing in the progression?");
-                
                 ProgressionGame.startProgressionGame(name);
             }
             case 6 -> {
                 String name = startBrainGames();
-
-                System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-
+                System.out.println(
+                    "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
                 PrimeGame.startPrimeGame(name);
             }
             default -> System.out.println("I don't know this game, try again..");
         }
+
+    }
+
+    public static int getAnswersScore() {
+        return correctAnswersScore;
+    }
+
+    public static void addScore() {
+        correctAnswersScore += 1;
     }
 }

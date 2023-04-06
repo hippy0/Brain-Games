@@ -8,10 +8,13 @@ import java.util.concurrent.ThreadLocalRandom;
 public class ProgressionGame {
 
     public static void startProgressionGame(String name) {
-        int progressionLength = ThreadLocalRandom.current().nextInt(5, 11);
+        int origin = 5;
+        int bound = 11;
+
+        int progressionLength = ThreadLocalRandom.current().nextInt(origin, bound);
         int hiddenElement = ThreadLocalRandom.current().nextInt(1, progressionLength - 1);
-        int beginNumber = ThreadLocalRandom.current().nextInt(0, 50);
-        int step = ThreadLocalRandom.current().nextInt(1, 6);
+        int beginNumber = ThreadLocalRandom.current().nextInt(0, origin * 10);
+        int step = ThreadLocalRandom.current().nextInt(1, origin + 1);
         int currentNumber = 0;
         int rightAnswer = 0;
 

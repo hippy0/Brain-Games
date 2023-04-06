@@ -6,8 +6,11 @@ import java.util.concurrent.ThreadLocalRandom;
 public class GcdGame {
 
     public static void startGcdGame(String name) {
-        int numberOne = ThreadLocalRandom.current().nextInt(1, 50);
-        int numberTwo = ThreadLocalRandom.current().nextInt(50, 101);
+        int origin = 50;
+        int bound = 101;
+
+        int numberOne = ThreadLocalRandom.current().nextInt(1, origin);
+        int numberTwo = ThreadLocalRandom.current().nextInt(origin, bound);
 
         int rightAnswer = getGcd(numberOne, numberTwo);
 

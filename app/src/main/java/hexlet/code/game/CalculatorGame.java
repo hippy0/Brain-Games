@@ -6,9 +6,13 @@ import java.util.concurrent.ThreadLocalRandom;
 public class CalculatorGame {
 
     public static void startCalculatorGame(String name) {
-        int operation = ThreadLocalRandom.current().nextInt(0, 3);
-        int numberOne = ThreadLocalRandom.current().nextInt(25, 51);
-        int numberTwo = ThreadLocalRandom.current().nextInt(0, 25);
+        int operationsCount = 3;
+        int origin = 25;
+        int bound = 51;
+
+        int operation = ThreadLocalRandom.current().nextInt(0, operationsCount);
+        int numberOne = ThreadLocalRandom.current().nextInt(origin, bound);
+        int numberTwo = ThreadLocalRandom.current().nextInt(0, origin);
 
         int rightAnswer;
 

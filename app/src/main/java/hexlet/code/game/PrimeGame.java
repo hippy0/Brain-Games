@@ -6,7 +6,9 @@ import java.util.concurrent.ThreadLocalRandom;
 public class PrimeGame {
 
     public static void startPrimeGame(String name) {
-        int random = ThreadLocalRandom.current().nextInt(0, 51);
+        int bound = 51;
+
+        int random = ThreadLocalRandom.current().nextInt(0, bound);
         boolean prime = isPrime(random);
 
         String rightAnswer;
