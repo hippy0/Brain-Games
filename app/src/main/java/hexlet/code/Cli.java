@@ -42,19 +42,6 @@ public class Cli {
         int gameNumber = Integer.parseInt(scanner.next());
 
         switch (gameNumber) {
-            case 0:
-                System.exit(1);
-            case 1:
-                startBrainGames();
-            case 2:
-                String name = startBrainGames();
-                System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-                EvenGame.startEvenGame(name);
-            case 3:
-
-        }
-
-        switch (gameNumber) {
             case 0 -> System.exit(0);
             case 1 -> startBrainGames();
             case 2 -> {
