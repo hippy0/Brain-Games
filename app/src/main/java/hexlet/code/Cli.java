@@ -53,14 +53,23 @@ public class Cli {
             }
             case 3 -> {
                 String name = startBrainGames();
+
+                System.out.println("What is the result of the expression?");
+
                 CalculatorGame.startCalculatorGame(name);
             }
             case 4 -> {
                 String name = startBrainGames();
+
+                System.out.println("Find the greatest common divisor of given numbers.");
+
                 GcdGame.startGcdGame(name);
             }
             case 5 -> {
                 String name = startBrainGames();
+
+                System.out.println("What number is missing in the progression?");
+                
                 ProgressionGame.startProgressionGame(name);
             }
             case 6 -> {
