@@ -13,7 +13,7 @@ public class ProgressionGame {
 
         int progressionLength = ThreadLocalRandom.current().nextInt(origin, bound);
         int hiddenElement = ThreadLocalRandom.current().nextInt(1, progressionLength - 1);
-        int beginNumber = ThreadLocalRandom.current().nextInt(0, origin * 10);
+        int beginNumber = ThreadLocalRandom.current().nextInt(0, origin * origin);
         int step = ThreadLocalRandom.current().nextInt(1, origin + 1);
         int currentNumber = 0;
         int rightAnswer = 0;
@@ -21,6 +21,8 @@ public class ProgressionGame {
         List<Integer> list = new ArrayList<>();
 
         list.add(beginNumber);
+
+        final int hidden = 100;
 
         for (int i = 1; i < progressionLength; i += 1) {
             if (i == 1) {
@@ -30,7 +32,7 @@ public class ProgressionGame {
             currentNumber += step;
 
             if (i == hiddenElement) {
-                list.add(100);
+                list.add(hidden);
                 rightAnswer = currentNumber;
             } else {
                 list.add(currentNumber);

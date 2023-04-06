@@ -12,7 +12,7 @@ public class Engine {
         if (playerAnswer.equals(String.valueOf(rightAnswer))) {
             System.out.println("Correct!");
 
-            Cli.addScore();;
+            Cli.addScore();
 
             if (Cli.getAnswersScore() == winScore) {
                 System.out.println("Congratulations, " + name + "!");
