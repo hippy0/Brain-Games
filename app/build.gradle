@@ -1,11 +1,24 @@
 plugins {
     id 'java'
     id 'application'
+    id 'org.cyclonedx.bom' version '1.7.4'
     id 'checkstyle'
 }
 
 group 'hexlet.code'
 version '1.0.1'
+
+cyclonedxBom {
+    includeConfigs = ["runtimeClasspath"]
+    skipConfigs = ["compileClasspath", "testCompileClasspath"]
+    projectType = "application"
+    schemaVersion = "1.4"
+    destination = file("build/reports")
+    outputName = "CycloneDX-Sbom"
+    outputFormat = "all"
+    includeBomSerialNumber = true
+    componentVersion = "2.0.0"
+}
 
 application {
     mainClass = 'hexlet.code.App'

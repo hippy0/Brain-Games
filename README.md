@@ -14,11 +14,52 @@
     GCD - Determining the largest common divisor.
     Prime - Determining a prime number.
 
-### Command to start game:
+### How to start:
 
-    make run-dist
-
+    ~/Brain-Games/app$ ./gradlew installDist
+    ~/Brain-Games/app$ make run-dist
 
 ### Asciinema:
 
 [![asciicast](https://asciinema.org/a/cQSBe2Rt6nB7N5Rf694Q378Iq.svg)](https://asciinema.org/a/cQSBe2Rt6nB7N5Rf694Q378Iq)
+
+### SBOM (Software bill of materials):
+
+```json
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.4",
+  "serialNumber" : "urn:uuid:f85eeb4f-af7a-4c27-a504-b1be34557335",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2023-04-07T13:47:12Z",
+    "tools" : [
+      {
+        "vendor" : "CycloneDX",
+        "name" : "cyclonedx-gradle-plugin",
+        "version" : "1.7.4"
+      }
+    ],
+    "component" : {
+      "group" : "hexlet.code",
+      "name" : "app",
+      "version" : "2.0.0",
+      "purl" : "pkg:maven/hexlet.code/app@1.0.1?type=jar",
+      "type" : "application",
+      "bom-ref" : "pkg:maven/hexlet.code/app@1.0.1?type=jar"
+    }
+  },
+  "dependencies" : [
+    {
+      "ref" : "pkg:maven/hexlet.code/app@1.0.1?type=jar",
+      "dependsOn" : [ ]
+    }
+  ]
+}
+```
+
+To create SBOM file (json and xml formats) use:
+    
+    ~/Brain-Games/app$ ./gradlew cyclonedxBom
+
+file will be located in this path: `app/build/reports/`
